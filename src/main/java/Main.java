@@ -1,3 +1,5 @@
+import java.util.concurrent.TimeUnit;
+
 public class Main {
     public static void main(String[] args) {
         Book noapteBuna = new Book("Noapte buna, copii!");
@@ -18,13 +20,14 @@ public class Main {
         cap1111.add(new Image("Image subchapter 1.1.1.1"));
         noapteBuna.print();
 
-        Image(String name) {
-            imageName = name;
-            try {
-                TimeUnit.SECONDS.sleep(5);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+    }
+
+    Image(String name) {
+        imageName = name;
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 }
