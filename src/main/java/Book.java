@@ -1,26 +1,25 @@
-public class Book {
-    private String name;
+public class Book extends Section {
+    private String title;
 
-    public Book(String name) {
-        this.name = name;
+    public Book(String title, String title1) {
+        super(title);
+        this.title = title1;
     }
 
-    private void print() {
-
+    @Override
+    public String getTitle() {
+        return title;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    @Override
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     @Override
     public String toString() {
         return "Book{" +
-                "name='" + name + '\'' +
+                "title='" + title + '\'' +
                 '}';
     }
 }

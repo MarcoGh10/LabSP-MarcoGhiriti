@@ -3,6 +3,7 @@ import java.awt.*;
 public class ImageProxy {
     String url;
     Dimension dim;
+    Image img = null;
 
     public ImageProxy(Dimension dim) {
         this.dim = dim;

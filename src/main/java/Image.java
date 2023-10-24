@@ -1,3 +1,5 @@
+import java.util.concurrent.TimeUnit;
+
 public class Image implements Element {
     private String url;
     private ImageContent content;
@@ -22,5 +24,14 @@ public class Image implements Element {
 
     public void ImageContent(content) {
 
+    }
+
+    Image(String name) {
+        String imageName = name;
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
