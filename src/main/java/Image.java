@@ -1,3 +1,5 @@
+import java.util.concurrent.TimeUnit;
+
 public class Image {
     private String imageName;
 
@@ -22,5 +24,14 @@ public class Image {
         return "Image{" +
                 "imageName='" + imageName + '\'' +
                 '}';
+    }
+
+    Image(String name) {
+        imageName = name;
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
