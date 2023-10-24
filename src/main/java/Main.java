@@ -17,6 +17,15 @@ public class Main {
         cap111.add(cap1111);
         cap1111.add(new Image("Image subchapter 1.1.1.1"));
         noapteBuna.print();
+
+        Image(String name) {
+            imageName = name;
+            try {
+                TimeUnit.SECONDS.sleep(5);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
 
