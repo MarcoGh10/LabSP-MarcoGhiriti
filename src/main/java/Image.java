@@ -1,6 +1,6 @@
 public class Image implements Element {
     private String url;
-
+    private ImageContent content;
     public Image(String url) {
         this.url = url;
     }
@@ -18,5 +18,9 @@ public class Image implements Element {
         return "Image{" +
                 "url='" + url + '\'' +
                 '}';
+    }
+
+    public void ImageContent(content) {
+
     }
 }
