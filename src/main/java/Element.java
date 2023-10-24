@@ -3,15 +3,15 @@ public interface Element {
 
     }
 
-    static void add() {
+    static void add(Element) {
 
     }
 
-    static void remove() {
+    static void remove(Element) {
 
     }
 
-    static int get() {
+    static int get(Element) {
 
     }
 }
