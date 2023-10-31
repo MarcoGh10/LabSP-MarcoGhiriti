@@ -1,43 +1,44 @@
-import java.awt.*;
 
-public class ImageProxy {
-    String url;
-    Dimension dim;
-    Image img = null;
+public abstract class ImageProxy implements Element, Picture {
+    private final String url;
+    private Image image;
 
-    public ImageProxy(Dimension dim) {
-        this.dim = dim;
-    }
+
 
     public ImageProxy(String url) {
         this.url = url;
     }
 
-    public loadImage(Image) {
-
+    @Override
+    public String url() {
+        String copyUrl = this.url;
+        return copyUrl;
     }
 
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public Dimension getDim() {
-        return dim;
-    }
-
-    public void setDim(Dimension dim) {
-        this.dim = dim;
+    public Image loadImage() {
+        if (this.image == null) {
+            this.image = new Image(this.url);
+        }
+        return this.image;
     }
 
     @Override
-    public String toString() {
-        return "ImageProxy{" +
-                "url='" + url + '\'' +
-                ", dim=" + dim +
-                '}';
+    public void print() {
+        loadImage().print();
+    }
+
+    @Override
+    public void add(Element element) {
+
+    }
+
+    @Override
+    public void remove(Element element) {
+
+    }
+
+    @Override
+    public Element get(int index) {
+        return null;
     }
 }

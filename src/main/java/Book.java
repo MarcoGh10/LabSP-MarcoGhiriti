@@ -1,25 +1,32 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Book extends Section {
-    private String title;
+    private List<Author> listOfAuthors = new ArrayList<>();
 
-    public Book(String title, String title1) {
+    public Book() {
+        super();
+    }
+
+    public Book(String title) {
         super(title);
-        this.title = title1;
     }
 
-    @Override
-    public String getTitle() {
-        return title;
+    public void addAuthor(Author author) {
+        this.listOfAuthors.add(author);
     }
 
-    @Override
-    public void setTitle(String title) {
-        this.title = title;
+    public void addContent(Element element) {
+        super.add(element);
     }
 
-    @Override
-    public String toString() {
-        return "Book{" +
-                "title='" + title + '\'' +
-                '}';
+    public void print() {
+        for (Author author : listOfAuthors) {
+            author.print();
+        }
+        System.out.print("Book title: ");
+        super.print();
     }
+
+
 }

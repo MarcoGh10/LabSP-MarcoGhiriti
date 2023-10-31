@@ -23,4 +23,8 @@ public class Paragraph {
                 "text='" + text + '\'' +
                 '}';
     }
+
+    public void setAlignStrategy(AlignCenter alignCenter) {
+
+    }
 }

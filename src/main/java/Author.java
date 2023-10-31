@@ -1,30 +1,23 @@
 public class Author {
     private String name;
+    private String surname;
+
+    public Author() {
+        this.name = null;
+        this.surname = null;
+    }
 
     public Author(String name) {
         this.name = name;
     }
 
-    private void print() {
-
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
+    public Author(String name, String surname) {
         this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return "Author{" +
-                "name='" + name + '\'' +
-                '}';
+        this.surname = surname;
     }
 
     public void print() {
-
+        System.out.println("Author name:" + this.name + " " + this.surname);
     }
+
 }
