@@ -1,18 +1,9 @@
 public interface Element {
-    static void print() {
+    public void print();
 
-    }
+    public void add(Element element);
 
-    static void add(Element) {
+    public void remove(Element element);
 
-    }
-
-    static void remove(Element) {
-
-    }
-
-    static int get(Element) {
-
-    }
+    public Element get(int index);
 }
-

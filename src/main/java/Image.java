@@ -1,7 +1,8 @@
-import javax.swing.text.html.parser.Element;
+import javax.lang.model.element.Element;
+import java.awt.*;
 import java.util.concurrent.TimeUnit;
 
-public class Image implements Element, Picture {
+public abstract class Image implements Element, Picture {
     private String url;
 
     public Image() {
@@ -31,6 +32,11 @@ public class Image implements Element, Picture {
     public String url() {
         String copyUrl = this.url;
         return copyUrl;
+    }
+
+    @Override
+    public Dimension dim() {
+        return null;
     }
 
     @Override
