@@ -1,9 +1,7 @@
 import java.awt.*;
 
 public interface Picture {
-
-    String url = null;
-    PictureContent content;
+    public String url();
 
     Dimension dim();
 

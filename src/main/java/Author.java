@@ -23,4 +23,8 @@ public class Author {
                 "name='" + name + '\'' +
                 '}';
     }
+
+    public void print() {
+
+    }
 }

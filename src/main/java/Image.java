@@ -1,37 +1,51 @@
+import javax.swing.text.html.parser.Element;
 import java.util.concurrent.TimeUnit;
 
-public class Image implements Element {
+public class Image implements Element, Picture {
     private String url;
-    private ImageContent content;
-    public Image(String url) {
-        this.url = url;
-    }
 
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    @Override
-    public String toString() {
-        return "Image{" +
-                "url='" + url + '\'' +
-                '}';
-    }
-
-    public void ImageContent(content) {
-
-    }
-
-    Image(String name) {
-        String imageName = name;
+    public Image() {
+        this.url = null;
         try {
             TimeUnit.SECONDS.sleep(5);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
+
+    public Image(String imageName) {
+        this.url = imageName;
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void print() {
+        System.out.println("Image name : " + this.url);
+    }
+
+    @Override
+    public String url() {
+        String copyUrl = this.url;
+        return copyUrl;
+    }
+
+    @Override
+    public void add(Element element) {
+
+    }
+
+    @Override
+    public void remove(Element element) {
+
+    }
+
+    @Override
+    public Element get(int index) {
+        return null;
+    }
+
 }
