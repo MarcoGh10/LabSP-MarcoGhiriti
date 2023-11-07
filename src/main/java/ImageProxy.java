@@ -16,9 +16,7 @@ public abstract class ImageProxy implements Element, Picture {
     }
 
     public Image loadImage() {
-        if (this.image == null) {
-            this.image = new Image(this.url);
-        }
+        if (this.image == null) this.image = new Image(this.url);
         return this.image;
     }
 

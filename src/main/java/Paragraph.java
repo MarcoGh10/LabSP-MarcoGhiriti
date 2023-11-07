@@ -1,12 +1,23 @@
-public class Paragraph {
+public class Paragraph implements Element, AlignStrategy {
     private String text;
 
     public Paragraph(String text) {
         this.text = text;
     }
 
-    private void print() {
+    @Override
+    public void add(Element e) {
 
+    }
+
+    @Override
+    public void remove(Element e) {
+
+    }
+
+    @Override
+    public Element get(int index) {
+        return null;
     }
 
     public String getText() {
@@ -17,14 +28,13 @@ public class Paragraph {
         this.text = text;
     }
 
-    @Override
-    public String toString() {
-        return "Paragraph{" +
-                "text='" + text + '\'' +
-                '}';
+    public void print() {
+        System.out.print("Paragraph: ");
+        System.out.println(text);
     }
 
-    public void setAlignStrategy(AlignCenter alignCenter) {
-
+    @Override
+    public String render(Paragraph paragraph, Context context) {
+        return null;
     }
 }

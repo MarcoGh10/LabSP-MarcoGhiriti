@@ -13,9 +13,9 @@ public class Main {
         System.out.println("Printing without Alignment");
         System.out.println();
         cap1.print();
-        p1.setAlignStrategy(new AlignCenter());
-        p2.setAlignStrategy(new AlignRight());
-        p3.setAlignStrategy(new AlignLeft());
+        // p1.setAlignStrategy(new AlignCenter());
+        //p2.setAlignStrategy(new AlignRight());
+        //p3.setAlignStrategy(new AlignLeft());
 
         System.out.println();
         System.out.println("Printing with Alignment");
