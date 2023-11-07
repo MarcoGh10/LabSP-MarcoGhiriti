@@ -1,5 +1,6 @@
+import javax.lang.model.util.Elements;
 
-public abstract class ImageProxy implements Element, Picture {
+public class ImageProxy implements Elements, Picture {
     private final String url;
     private Image image;
 
@@ -15,8 +16,15 @@ public abstract class ImageProxy implements Element, Picture {
         return copyUrl;
     }
 
+    @Override
+    public void add(Elements element) {
+
+    }
+
     public Image loadImage() {
-        if (this.image == null) this.image = new Image(this.url);
+        if (this.image == null) {
+            this.image = new Image(this.url);
+        }
         return this.image;
     }
 
@@ -26,17 +34,7 @@ public abstract class ImageProxy implements Element, Picture {
     }
 
     @Override
-    public void add(Element element) {
+    public void remove(Elements element) {
 
-    }
-
-    @Override
-    public void remove(Element element) {
-
-    }
-
-    @Override
-    public Element get(int index) {
-        return null;
     }
 }

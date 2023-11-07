@@ -16,8 +16,8 @@ public class Book extends Section {
         this.listOfAuthors.add(author);
     }
 
-    public void addContent(Element element) {
-        super.add(element);
+    public void addContent(Elements elements) {
+        super.add(elements);
     }
 
     public void print() {

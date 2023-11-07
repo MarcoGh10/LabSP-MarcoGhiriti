@@ -1,4 +1,4 @@
-public class Image implements Element {
+public class Image implements Elements {
     private String url;
 
     public Image(String url) {
@@ -6,17 +6,17 @@ public class Image implements Element {
     }
 
     @Override
-    public void add(Element e) {
+    public void add(Elements e) {
 
     }
 
     @Override
-    public void remove(Element e) {
+    public void remove(Elements e) {
 
     }
 
     @Override
-    public Element get(int index) {
+    public Elements get(int index) {
         return null;
     }
 

@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Section implements Element {
+public class Section implements Elements {
     private String title;
-    private List<Element> listOfElements = new ArrayList<>();
+    private List<Elements> listOfElements = new ArrayList<>();
 
     public Section() {
         this.title = null;
@@ -13,32 +13,32 @@ public class Section implements Element {
         this.title = title;
     }
 
-    public Section(String title, List<Element> listOfElements) {
+    public Section(String title, List<Elements> listOfElements) {
         this.title = title;
         this.listOfElements = listOfElements;
     }
 
     @Override
-    public Element clone() {
+    public Elements clone() {
         return new Section(this.title, this.listOfElements);
     }
 
     public void print() {
         System.out.println(title);
-        for (Element element : listOfElements) {
-            element.print();
+        for (Elements elements : listOfElements) {
+            elements.print();
         }
     }
 
-    public void add(Element element) {
-        this.listOfElements.add(element);
+    public void add(Elements elements) {
+        this.listOfElements.add(elements);
     }
 
-    public void remove(Element element) {
-        this.listOfElements.remove(element);
+    public void remove(Elements elements) {
+        this.listOfElements.remove(elements);
     }
 
-    public Element get(int index) {
+    public Elements get(int index) {
         return this.listOfElements.get(index);
     }
 }

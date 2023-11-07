@@ -1,17 +1,17 @@
-public class TableOfContents implements Element {
+public class TableOfContents implements Elements {
     public void print() {
 
     }
 
-    public void add(Element element) {
+    public void add(Elements elements) {
 
     }
 
-    public void remove(Element element) {
+    public void remove(Elements elements) {
 
     }
 
-    public Element get(int index) {
+    public Elements get(int index) {
         return null;
     }
 }

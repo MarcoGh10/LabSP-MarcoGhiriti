@@ -1,4 +1,4 @@
-public class Paragraph implements Element, AlignStrategy {
+public class Paragraph implements Elements, AlignStrategy {
     private String text;
 
     public Paragraph(String text) {
@@ -6,17 +6,17 @@ public class Paragraph implements Element, AlignStrategy {
     }
 
     @Override
-    public void add(Element e) {
+    public void add(Elements e) {
 
     }
 
     @Override
-    public void remove(Element e) {
+    public void remove(Elements e) {
 
     }
 
     @Override
-    public Element get(int index) {
+    public Elements get(int index) {
         return null;
     }
 
