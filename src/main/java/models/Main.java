@@ -1,3 +1,5 @@
+package models;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationContext;
 public class Main {
@@ -6,11 +8,11 @@ public class Main {
 // Run this main function and inspect the output console
 // to learn about
 // the lifecycle of objects within
-// Spring Dependency Injection Context
+// Spring Dependency Injection models.Context
 //
 // Gets a handle of dependency injection context
         ApplicationContext context = SpringApplication.run(Main.class, args);
-// Gets an instance of TransientComponent from the DI context
+// Gets an instance of models.TransientComponent from the DI context
         TransientComponent transientBean =
                 context.getBean(TransientComponent.class);
         transientBean.operation();
@@ -18,7 +20,7 @@ public class Main {
 // the DI context creates a new one
         transientBean = context.getBean(TransientComponent.class);
         transientBean.operation();
-// Gets an instance of SingletonComponent from the DI context
+// Gets an instance of models.SingletonComponent from the DI context
 // Note that the unique instance was created while
 // application was loaded, before creating
 // the transient instances

@@ -1,4 +1,6 @@
-public class AlignCenter implements AlignStrategy {
+package service;
+
+public class AlignLeft implements AlignStrategy {
     @Override
     public String render(Paragraph paragraph, Context context) {
         return null;

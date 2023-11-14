@@ -1,3 +1,5 @@
+package models;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -11,17 +13,17 @@ public class ClientComponent {
             sc) {
         this.tc = tc;
         this.sc = sc;
-        System.out.println("ClientComponent::ClientComponent = " +
+        System.out.println("models.ClientComponent::models.ClientComponent = " +
 
                 this);
-        System.out.println(" o SingletonComponent = " + sc);
-        System.out.println(" o TransientComponent = " + tc);
+        System.out.println(" o models.SingletonComponent = " + sc);
+        System.out.println(" o models.TransientComponent = " + tc);
     }
 
     public void operation() {
-        System.out.println("Invoked ClientComponent::operation() on " +
+        System.out.println("Invoked models.ClientComponent::operation() on " +
                 this);
-        System.out.println(" o SingletonComponent = " + sc);
-        System.out.println(" o TransientComponent = " + tc);
+        System.out.println(" o models.SingletonComponent = " + sc);
+        System.out.println(" o models.TransientComponent = " + tc);
     }
 }

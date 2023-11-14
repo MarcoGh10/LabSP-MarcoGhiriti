@@ -1,3 +1,5 @@
+package models;
+
 public class Image implements Elements {
     private String url;
 

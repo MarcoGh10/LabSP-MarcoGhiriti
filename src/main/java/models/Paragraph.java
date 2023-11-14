@@ -1,3 +1,7 @@
+package models;
+
+import service.AlignStrategy;
+
 public class Paragraph implements Elements, AlignStrategy {
     private String text;
 
@@ -29,7 +33,7 @@ public class Paragraph implements Elements, AlignStrategy {
     }
 
     public void print() {
-        System.out.print("Paragraph: ");
+        System.out.print("models.Paragraph: ");
         System.out.println(text);
     }
 

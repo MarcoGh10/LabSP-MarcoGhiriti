@@ -1,3 +1,5 @@
+package service;
+
 public class AlignRight implements AlignStrategy {
     @Override
     public String render(Paragraph paragraph, Context context) {

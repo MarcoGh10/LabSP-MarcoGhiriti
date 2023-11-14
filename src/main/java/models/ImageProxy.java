@@ -1,3 +1,5 @@
+package models;
+
 import javax.lang.model.util.Elements;
 
 public class ImageProxy implements Elements, Picture {

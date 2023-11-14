@@ -1,3 +1,5 @@
+package models;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +26,7 @@ public class Book extends Section {
         for (Author author : listOfAuthors) {
             author.print();
         }
-        System.out.print("Book title: ");
+        System.out.print("models.Book title: ");
         super.print();
     }
 

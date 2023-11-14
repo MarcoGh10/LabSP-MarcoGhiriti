@@ -1,3 +1,5 @@
+package models;
+
 public class Table {
 
     private Long id;
@@ -10,7 +12,7 @@ public class Table {
 
     @Override
     public String toString() {
-        return "Table{" +
+        return "models.Table{" +
                 "id=" + id +
                 ", tableContent='" + tableContent + '\'' +
                 ", subChapter=" + subChapter +

@@ -1,7 +1,9 @@
-public class SubChapter {
+package models;
+
+public class Chapter {
     private String name;
 
-    public SubChapter(String name) {
+    public Chapter(String name) {
         this.name = name;
     }
 
@@ -19,7 +21,7 @@ public class SubChapter {
 
     @Override
     public String toString() {
-        return "SubChapter{" +
+        return "models.Chapter{" +
                 "name='" + name + '\'' +
                 '}';
     }
