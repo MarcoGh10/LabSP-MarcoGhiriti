@@ -4,6 +4,8 @@ import javax.lang.model.util.Elements;
 import javax.swing.text.html.parser.Element;
 
 public interface Picture {
+    void add(Elements element);
+
     void print();
 
     public String url();

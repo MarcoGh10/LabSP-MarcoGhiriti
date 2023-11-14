@@ -1,5 +1,8 @@
 package service;
 
+import models.Context;
+import models.Paragraph;
+
 public class AlignRight implements AlignStrategy {
     @Override
     public String render(Paragraph paragraph, Context context) {

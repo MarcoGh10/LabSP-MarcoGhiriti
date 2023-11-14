@@ -8,4 +8,6 @@ public interface Elements {
     public void remove(Elements elements);
 
     public Elements get(int index);
+
+    String render(Paragraph paragraph, Context context);
 }
