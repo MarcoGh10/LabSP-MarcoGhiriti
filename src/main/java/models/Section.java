@@ -5,6 +5,23 @@ import java.util.List;
 
 public class Section implements Elements {
     private String title;
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public List<Elements> getListOfElements() {
+        return listOfElements;
+    }
+
+    public void setListOfElements(List<Elements> listOfElements) {
+        this.listOfElements = listOfElements;
+    }
+
     private List<Elements> listOfElements = new ArrayList<>();
 
     public Section() {
