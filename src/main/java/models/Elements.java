@@ -11,5 +11,7 @@ public interface Elements {
 
     void remove(Elements e);
 
+    Elements get(int index);
+
     void print();
 }

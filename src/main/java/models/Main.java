@@ -1,8 +1,6 @@
 package models;
 
 import service.AlignCenter;
-import service.AlignLeft;
-import service.AlignRight;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,8 +17,8 @@ public class Main {
         System.out.println();
         cap1.print();
         p1.setAlignStrategy(new AlignCenter());
-        p2.render(new AlignRight(p2, ));
-        p3.setAlignStrategy(new AlignLeft());
+        //   p2.render(new AlignRight(p2, ));
+        //    p3.setAlignStrategy(new AlignLeft());
         System.out.println();
         System.out.println("Printing with Alignment");
         System.out.println();

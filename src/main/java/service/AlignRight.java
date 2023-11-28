@@ -21,4 +21,9 @@ public class AlignRight implements AlignStrategy {
             return alignedText.toString();
         }
     }
+
+    @Override
+    public void setAlignStrategy(AlignCenter alignCenter) {
+
+    }
 }

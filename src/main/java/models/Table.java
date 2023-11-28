@@ -26,5 +26,8 @@ public class Table {
     public void setId(Long id) {
         this.id = id;
     }
+
+    private class SubChapter {
+    }
     // Other table-related properties and methods
 }

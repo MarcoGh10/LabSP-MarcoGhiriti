@@ -8,4 +8,9 @@ public class AlignCenter implements AlignStrategy {
     public String render(Paragraph paragraph, Context context) {
         return null;
     }
+
+    @Override
+    public void setAlignStrategy(AlignCenter alignCenter) {
+
+    }
 }

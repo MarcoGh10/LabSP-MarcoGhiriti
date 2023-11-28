@@ -16,6 +16,11 @@ public class Section implements Elements {
         elementList.add(e);
     }
 
+    @Override
+    public Elements getElement() {
+        return Elements.super.getElement();
+    }
+
     public String getTitle() {
         return title;
     }
@@ -35,6 +40,11 @@ public class Section implements Elements {
     @Override
     public void remove(Elements e) {
         elementList.remove(e);
+    }
+
+    @Override
+    public Elements get(int index) {
+        return null;
     }
 
     public void print() {

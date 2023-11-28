@@ -1,5 +1,6 @@
 package models;
 
+import service.AlignCenter;
 import service.AlignStrategy;
 
 public class Paragraph implements Elements, AlignStrategy {
@@ -12,6 +13,11 @@ public class Paragraph implements Elements, AlignStrategy {
     @Override
     public void add(Elements e) {
 
+    }
+
+    @Override
+    public Elements getElement() {
+        return Elements.super.getElement();
     }
 
     @Override
@@ -40,5 +46,10 @@ public class Paragraph implements Elements, AlignStrategy {
     @Override
     public String render(Paragraph paragraph, Context context) {
         return null;
+    }
+
+    @Override
+    public void setAlignStrategy(AlignCenter alignCenter) {
+
     }
 }
