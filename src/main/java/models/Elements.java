@@ -1,13 +1,15 @@
 package models;
 
 public interface Elements {
-    public void print();
+    void add(Elements e);
 
-    public void add(Elements elements);
+    default Elements getElement() {
+        return this;
+    }
 
-    public void remove(Elements elements);
+    ;
 
-    public Elements get(int index);
+    void remove(Elements e);
 
-    String render(Paragraph paragraph, Context context);
+    void print();
 }
