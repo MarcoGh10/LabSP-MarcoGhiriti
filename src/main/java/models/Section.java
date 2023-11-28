@@ -5,6 +5,16 @@ import java.util.List;
 
 public class Section implements Elements {
     private String title;
+    List<Elements> elementList = new ArrayList<Elements>();
+
+    public Section(String title) {
+        this.title = title;
+    }
+
+    @Override
+    public void add(Elements e) {
+        elementList.add(e);
+    }
 
     public String getTitle() {
         return title;
@@ -14,50 +24,24 @@ public class Section implements Elements {
         this.title = title;
     }
 
-    public List<Elements> getListOfElements() {
-        return listOfElements;
+    public List<Elements> getElementList() {
+        return elementList;
     }
 
-    public void setListOfElements(List<Elements> listOfElements) {
-        this.listOfElements = listOfElements;
-    }
-
-    private List<Elements> listOfElements = new ArrayList<>();
-
-    public Section() {
-        this.title = null;
-    }
-
-    public Section(String title) {
-        this.title = title;
-    }
-
-    public Section(String title, List<Elements> listOfElements) {
-        this.title = title;
-        this.listOfElements = listOfElements;
+    public void setElementList(List<Elements> elementList) {
+        this.elementList = elementList;
     }
 
     @Override
-    public Elements clone() {
-        return new Section(this.title, this.listOfElements);
+    public void remove(Elements e) {
+        elementList.remove(e);
     }
 
     public void print() {
         System.out.println(title);
-        for (Elements elements : listOfElements) {
-            elements.print();
+        for (Elements element : elementList) {
+            element.print();
         }
     }
 
-    public void add(Elements elements) {
-        this.listOfElements.add(elements);
-    }
-
-    public void remove(Elements elements) {
-        this.listOfElements.remove(elements);
-    }
-
-    public Elements get(int index) {
-        return this.listOfElements.get(index);
-    }
 }

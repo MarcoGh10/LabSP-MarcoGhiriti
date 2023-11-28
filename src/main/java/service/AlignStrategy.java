@@ -6,4 +6,6 @@ import models.Paragraph;
 public interface AlignStrategy {
 
     String render(Paragraph paragraph, Context context);
+
+    void setAlignStrategy(AlignCenter alignCenter);
 }
