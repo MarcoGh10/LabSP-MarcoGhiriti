@@ -13,7 +13,7 @@ public class CreateBookCommand {
     }
 
     public Book execute() {
-        Book book = new Book();
+        Book book = new Book("Noapte buna, copii!");
         // Set properties on book
 
         // Save the book using the repository
