@@ -8,7 +8,7 @@ public class Book {
     private List<Author> authorList = new ArrayList<Author>();
     private List<Elements> elementsList = new ArrayList<Elements>();
 
-    public Book(String title) {
+    public Book() {
         this.title = title;
     }
 
