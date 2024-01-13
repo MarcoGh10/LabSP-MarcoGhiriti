@@ -1,33 +1,36 @@
 package models;
 
-public class Table {
+import lombok.Data;
 
-    private Long id;
-    private String tableContent;
-    private SubChapter subChapter;
+@Data
+public class Table implements Elements {
+    private String something;
 
-    public Table(Long id) {
-        this.id = id;
+    public Table(String something) {
+        this.something = something;
+    }
+
+    public void print() {
+        System.out.println("Something: " + something);
     }
 
     @Override
-    public String toString() {
-        return "models.Table{" +
-                "id=" + id +
-                ", tableContent='" + tableContent + '\'' +
-                ", subChapter=" + subChapter +
-                '}';
+    public void add(Elements element) {
+
     }
 
-    public Long getId() {
-        return id;
+    @Override
+    public void remove(Elements element) {
+
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    @Override
+    public Elements get(int id) {
+        return null;
     }
 
-    private class SubChapter {
+
+    public void accept(Visitor v) {
+        v.visitTable(this);
     }
-    // Other table-related properties and methods
 }

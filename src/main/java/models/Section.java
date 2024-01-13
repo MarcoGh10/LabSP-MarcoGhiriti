@@ -1,5 +1,7 @@
 package models;
 
+import service.BookStatisticsVisitor;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,4 +56,6 @@ public class Section implements Elements {
         }
     }
 
+    public void accept(BookStatisticsVisitor stats) {
+    }
 }
